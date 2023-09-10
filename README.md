@@ -7,6 +7,8 @@
 
 # Arxiv Researcher
 Built with Langchain, Nougat, OpenAI, Gradio, and Pixi
+## Prerequisites
+Only tested on a linux machine, requires a CUDA gpu as Nougat will be too slow otherwise
 ## Quick Start
 ### Step 1. Install pixi package manager
 
@@ -28,6 +30,7 @@ pixi run app
 ## Todo 
 - [x] Initial Release with OpenAI 3.5-16k
 - [ ] Add CTransfomers/Ollama for local version
+- [ ] Colab Demo
 - [ ] Huggingface Spaces Demo 
 
 ## Acknowledgments
