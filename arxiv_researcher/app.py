@@ -184,17 +184,12 @@ def main() -> None:
         overflow: auto; 
         border: 1px solid #ccc; 
     }
-    #small_mkd {
-        height: 250px; 
-        overflow: auto; 
-        border: 1px solid #ccc; 
-    }
     """
 
     with gr.Blocks(css=css) as demo:
-        gr.HTML("<h1><center>Langchain and Nougat<center><h1>")
+        gr.HTML("<h1><center>🦉 Arxiv Researcher<center><h1>")
         gr.HTML(
-            "<h3><center>Uses Nougat OCR and Langchain (GPT-3.5) to generate a summary of whatever provided arxiv or pdf<center></h3>"
+            "<h3><center>Uses Nougat OCR and Langchain (GPT-3.5) to generate a summary of provided arxiv link or pdf<center></h3>"
         )
 
         with gr.Row():
@@ -220,10 +215,12 @@ def main() -> None:
             gr.Markdown("<h3>Final Summary of entire Arixv document👇:</h3>")
         with gr.Row():
             parsed_output = gr.Markdown(elem_id="mkd", value="📃🔤OCR Output")
-            individual_summary = gr.Markdown(elem_id="mkd", value="Individual Summary")
+            individual_summary = gr.Markdown(
+                elem_id="mkd", value="Individual Summary, wait for OCR to be done..."
+            )
             final_summary = gr.Markdown(
                 elem_id="mkd",
-                value="Overall Summary, wait for all individual summaries to be generated ...",
+                value="Overall Summary, wait for all individual summaries to be generated...",
             )
 
         btn.click(

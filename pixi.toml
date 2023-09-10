@@ -8,7 +8,7 @@ platforms = ["linux-64"]
 
 [tasks]
 postinstall = "pip install -e ."
-app = "python arxiv_researcher/app.py"
+app = { cmd = "python arxiv_researcher/app.py", depends_on = ["postinstall"] }
 
 [dependencies]
 python = ">=3.10"
